@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sailsbery - Home</title>
     <!-- Add your CSS stylesheets and links to external CSS libraries here -->
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            var hostname = window.location.hostname;
+
+            if (hostname === "family.sailsbery.com") {
+                window.location.href = "https://jsailsbery.github.io/family";
+            } else if (hostname === "professional.sailsbery.com") {
+                window.location.href = "https://jsailsbery.github.io/professional";
+            } 
+            // ... you can continue with else-if conditions for other subdomains if needed
+        });
+    </script>
 </head>
 <body>
     <!-- Header Section -->
