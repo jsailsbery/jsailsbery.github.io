@@ -7,17 +7,20 @@
     <!-- Add your CSS stylesheets and links to external CSS libraries here -->
 
     <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function() {
-            var hostname = window.location.hostname;
+    document.addEventListener("DOMContentLoaded", function() {
+        var hostname = window.location.hostname;
 
-            // Extract subdomain from the hostname
-            var subdomain = hostname.split('.')[0];
+        // Extract subdomain from the hostname
+        var subdomain = hostname.split('.')[0];
 
-            // If the subdomain isn't 'www' or 'sailsbery' (to avoid redirecting the main domain), then redirect
-            if (subdomain !== 'www' && subdomain !== 'sailsbery') {
-                window.location.href = `https://jsailsbery.github.io/${subdomain}`;
-            }
-        });
+        // Display the subdomain using an alert
+        alert("Subdomain: " + subdomain);
+
+        // If you still wish to redirect based on the subdomain, you can uncomment the following lines:
+        // if (subdomain !== 'www' && subdomain !== 'sailsbery') {
+        //     window.location.href = `https://jsailsbery.github.io/${subdomain}`;
+        // }
+    });
     </script>
 </head>
 <body>
