@@ -10,12 +10,13 @@
         document.addEventListener("DOMContentLoaded", function() {
             var hostname = window.location.hostname;
 
-            if (hostname === "family.sailsbery.com") {
-                window.location.href = "https://jsailsbery.github.io/family";
-            } else if (hostname === "professional.sailsbery.com") {
-                window.location.href = "https://jsailsbery.github.io/professional";
-            } 
-            // ... you can continue with else-if conditions for other subdomains if needed
+            // Extract subdomain from the hostname
+            var subdomain = hostname.split('.')[0];
+
+            // If the subdomain isn't 'www' or 'sailsbery' (to avoid redirecting the main domain), then redirect
+            if (subdomain !== 'www' && subdomain !== 'sailsbery') {
+                window.location.href = `https://jsailsbery.github.io/${subdomain}`;
+            }
         });
     </script>
 </head>
